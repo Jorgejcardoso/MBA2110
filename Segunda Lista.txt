@@ -1,0 +1,346 @@
+Segunda lista
+Jorge Cardoso
+
+1018,1019,1020,1021,1035,1036,1037,1038,1040,1041
+Adhoc
+1329,1467,1171
+estrutura de dados
+1068
+1069
+
+
+Uri 1018
+valor = int(input())
+resutado = str(valor)+'\n'
+mod100 = valor%100
+if(mod100 == valor):
+    resutado += '%d nota(s) de R$ 100,00\n' % 0
+else:
+    resutado += '%d nota(s) de R$ 100,00\n' % (valor / 100)
+mod50 = mod100%50
+if(mod50 == mod100):
+    resutado += '%d nota(s) de R$ 50,00\n' % 0
+else:
+    resutado += '%d nota(s) de R$ 50,00\n' % (mod100 / 50)
+mod20 = mod50%20
+if(mod20 == mod50):
+    resutado += '%d nota(s) de R$ 20,00\n' % 0
+else:
+    resutado += '%d nota(s) de R$ 20,00\n' % (mod50 / 20)
+mod10 = mod20%10
+if(mod10 == mod20):
+    resutado += '%d nota(s) de R$ 10,00\n' % 0
+else:
+    resutado += '%d nota(s) de R$ 10,00\n' % (mod20 / 10)
+mod5 = mod10%5
+if(mod5 == mod10):
+    resutado += '%d nota(s) de R$ 5,00\n' % 0
+else:
+    resutado += '%d nota(s) de R$ 5,00\n' % (mod10/ 5)
+mod2 = mod5%2
+if(mod2 == mod5):
+    resutado += '%d nota(s) de R$ 2,00\n' % 0
+else:
+    resutado += '%d nota(s) de R$ 2,00\n' % (mod5/ 2)
+mod1 = mod2%1
+if(mod1 == mod2):
+    resutado += '%d nota(s) de R$ 1,00' % 0
+else:
+    resutado += '%d nota(s) de R$ 1,00' % (mod2 / 1)
+print(resutado)
+
+Uri 1019
+valor = int(input())
+h = int(valor/60/60)
+m = int((valor / 60) - (h * 60))
+s = int(valor - ((h*60*60) + (m * 60)))
+print(str(h)+':'+str(m)+':'+str(s))
+
+Uri 1020
+valor = int(input())
+ano = int(valor / 365)
+mes = int((valor%365/30))
+dia = int(valor%365%30)
+print('%d ano(s)\n%d mes(es)\n%d dia(s)' %(ano,mes,dia))
+
+Uri 1021
+valor = float(input())
+resultado = 'NOTAS:\n'
+mod100 = valor%100
+if(mod100 == valor):
+    resultado += '%d nota(s) de R$ 100.00\n' % 0
+else:
+    resultado += '%d nota(s) de R$ 100.00\n' % (valor / 100)
+mod50 = mod100%50
+if(mod50 == mod100):
+    resultado += '%d nota(s) de R$ 50.00\n' % 0
+else:
+    resultado += '%d nota(s) de R$ 50.00\n' % (mod100 / 50)
+mod20 = mod50%20
+if(mod20 == mod50):
+    resultado += '%d nota(s) de R$ 20.00\n' % 0
+else:
+    resultado += '%d nota(s) de R$ 20.00\n' % (mod50 / 20)
+mod10 = mod20%10
+if(mod10 == mod20):
+    resultado += '%d nota(s) de R$ 10.00\n' % 0
+else:
+    resultado += '%d nota(s) de R$ 10.00\n' % (mod20 / 10)
+mod5 = mod10%5
+if(mod5 == mod10):
+    resultado += '%d nota(s) de R$ 5.00\n' % 0
+else:
+    resultado += '%d nota(s) de R$ 5.00\n' % (mod10/ 5)
+mod2 = mod5%2
+if(mod2 == mod5):
+    resultado += '%d nota(s) de R$ 2.00\n' % 0
+else:
+    resultado += '%d nota(s) de R$ 2.00\n' % (mod5/ 2)
+resultado += 'MOEDAS:\n'    
+mod1 = mod2%1
+if(mod1 == mod2):
+    resultado += '%d moeda(s) de R$ 1.00\n' % 0
+else:
+    resultado += '%d moeda(s) de R$ 1.00\n' % (mod2 / 1)
+mod1 = mod1*100
+mod050 = mod1%50
+if(mod050 == mod1):
+    resultado += '%d moeda(s) de R$ 0.50\n' % 0
+else:
+    resultado += '%d moeda(s) de R$ 0.50\n' % (mod1 / 50)
+mod025 = mod050%25
+if(mod025 == mod050):
+    resultado += '%d moeda(s) de R$ 0.25\n' % 0
+else:
+    resultado += '%d moeda(s) de R$ 0.25\n' % (mod050 / 25)
+mod010 = mod025%10
+if(mod010 == mod025):
+    resultado += '%d moeda(s) de R$ 0.10\n' % 0
+else:
+    resultado += '%d moeda(s) de R$ 0.10\n' % (mod025 / 10)
+mod005 = mod010%5
+if(mod005 == mod010):
+    resultado += '%d moeda(s) de R$ 0.05\n' % 0
+else:
+    resultado += '%d moeda(s) de R$ 0.05\n' % (mod010 / 5)
+mod001 = mod005%1
+if(mod001 == mod005):
+    resultado += '%d moeda(s) de R$ 0.01' % 0
+else:
+    resultado += '%d moeda(s) de R$ 0.01' % (mod005 / 1)  
+print(resultado)
+
+Uri 1035
+valores = input().split(" ")
+A, B, C, D = valores
+A = int(A)
+B = int(B)
+C = int(C)
+D = int(D)
+if((B>C and D>A) and (C+D>B+A) and (C >=0 and D >=0) and (A%2 ==0)):
+    print("Valores aceitos")
+else:
+    print("Valores nao aceitos")
+
+Uri 1036
+import math
+valores = input().split()
+A, B, C = valores
+A = float(A)
+B = float(B)
+C = float(C)
+r1 = 0
+r2 = 0
+calc = (B**2)-(4*A*C)
+if(calc <0 or A==0):
+    print("Impossivel calcular")
+else:
+    calc=math.sqrt(calc)
+    r1 = (-B+calc)/(2*A)
+    r2 = (-B-calc)/(2*A)
+    print("R1 = %.5f\nR2 = %.5f" %(r1,r2))
+
+
+
+Uri 1037
+valor = float(input())
+n_achou = True
+resposta = ''
+if(valor < 0 or valor > 100):
+    resposta += 'Fora de intervalo'
+    n_achou = False
+if(valor <= 25.00 and n_achou):
+    resposta += 'Intervalo [0,25]'
+    n_achou = False
+if(valor <= 50.0 and n_achou):
+    resposta += 'Intervalo (25,50]'
+    n_achou = False
+if(valor <=75.0 and n_achou):
+    resposta += 'Intervalo (50,75]'
+    n_achou = False
+if(valor <=100.0 and n_achou):
+    resposta += 'Intervalo (75,100]'
+    n_achou = False
+print(resposta)
+
+
+Uri 1038
+valores = input().split()
+codigo, qte = valores
+qte = int(qte)
+tab_preco = {"1":4.0, "2":4.5,"3":5.0,"4":2.0,"5":1.5}
+resultado = qte * tab_preco[codigo]
+print('Total: R$ %.2f' %resultado)
+
+
+Uri 1040
+valores = input().split()
+N1, N2, N3, N4 = valores
+N1 = float(N1)
+N2 = float(N2)
+N3 = float(N3)
+N4 = float(N4)
+nota_exame = 0.0
+MEDIA = ((N1*2)+(N2*3)+(N3*4)+(N4*1))/10
+print('Media: %.1f' %MEDIA)
+if(MEDIA >= 7.0):
+    print("Aluno aprovado.")
+if(MEDIA < 5.0):
+    print("Aluno reprovado.")
+if(MEDIA >= 5.0 and MEDIA <= 6.9):
+    print("Aluno em exame.")
+    nota_exame = float(input())
+    print("Nota do exame: %.1f" %nota_exame)
+    MEDIA = (MEDIA + nota_exame)/2
+    if(MEDIA >= 5.0):
+        print("Aluno aprovado.")
+    else:
+        print("Aluno reprovado.")
+    print('Media final: %.1f' %MEDIA)
+
+
+Uri 1041
+valores = input().split()
+x, y = valores
+x = float(x)
+y = float(y)
+if(x == 0.0 and y == 0.0):
+    print('Origem')
+if(x == 0.0 and y != 0.0):
+    print('Eixo Y')
+if(x != 0.0 and y == 0.0):
+    print('Eixo X')
+if(x > 0 and y > 0):
+    print('Q1')
+if(x < 0 and y > 0):
+    print('Q2')
+if(x < 0 and y < 0):
+    print('Q3')
+if(x > 0 and y < 0):
+    print('Q4')
+
+Uri 1329
+while 1:
+	qte = int(input())
+
+	if (qte == 0):
+		break
+
+	resultados = list(map(int,input().split()))
+	m = 0
+	j = 0
+	for v in resultados:
+		if(v == 0):
+			m += 1
+		else:
+			j += 1
+	print("Mary won %d times and John won %d times" %(m,j))
+
+Uri 1467
+while True:
+    try:
+        a,b,c = list(map(int,input().split()))
+        
+        if(a == b == c):
+        	print("*")
+        else:
+        	if(a == b):
+        		print("C")
+        	else:
+        		if(a == c):
+        			print("B")
+        		else:
+        			print("A")
+    except (EOFError):
+        break
+
+Uri 1171
+qte = int(input())
+lista = {}
+for i in range(qte):
+	v = int(input())
+	if(v in lista):
+		lista[v] += 1
+	else:
+		lista[v] = 1
+
+
+chaves = lista.keys()
+chaves = sorted(chaves)
+
+for k in chaves:
+	print("%d aparece %d vez(es)" %(k,lista[k]))
+
+
+
+Uri 1068
+while True:
+    try:
+        linha = input()
+        lista = []
+        correct = False
+        p1 = 0
+        p2 = 0
+        for v in linha:
+            if (v == '('):
+                p1 += 1
+                lista.append(v)
+            if (v == ')'):
+                p2 += 1
+                lista.append(v)
+
+        if(len(lista)%2 != 0):
+            correct = False
+        else:
+            if(lista[0] == ')'):
+                correct = False
+            else:
+                if (lista[len(lista)-1] == '('):
+                    correct = False
+                else:
+                    if (p1 != p2):
+                        correct = False
+                    else:
+                        correct = True
+        if(correct):
+            print("correct")
+        else:
+            print("incorrect")
+    except (EOFError):
+        break
+
+
+Uri 1069
+qte = int(input())
+for i in range(qte):
+	linha = input()
+	total = 0
+	menor = 0
+	for j in range(len(linha)):
+		if(linha[j] == "<"):
+			menor += 1
+		if(linha[j] == ">" and menor > 0):
+			total += 1
+			menor -= 1
+	print(total)
+
